@@ -1,0 +1,203 @@
+body {
+  /* background-color: rgb(0, 255, 98); */
+  overflow-x: hidden;
+  max-width: 1400px;
+}
+.whole-section {
+  background-color: rgb(247, 246, 246);
+
+  display: flex;
+  height: 290px;
+  /* margin-top: 1rem; */
+  justify-content: center;
+}
+.aside-bar {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.3rem;
+
+  position: relative;
+  border-radius: 10px;
+  background-image: url("images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 9rem;
+  background-color: aliceblue;
+}
+.steps {
+  font-size: 8px;
+
+  margin-left: 1rem;
+  color: rgb(171, 202, 202);
+  font-weight: lighter;
+}
+.basic-details {
+  font-size: 6px;
+  color: white;
+  font-weight: bold;
+}
+.number {
+  border: 0.5px solid white;
+
+  font-size: 0.5rem;
+
+  background-color: #a7eeee;
+  /* padding: 0.9rem;
+    margin-bottom: 0.2rem; */
+  width: 1rem;
+  border-radius: 50%;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number2 {
+  font-size: 0.5rem;
+
+  /* background-color: #a7eeee; */
+  /* padding: 0.9rem;
+    margin-bottom: 0.2rem; */
+  width: 1rem;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number3 {
+  font-size: 0.5rem;
+
+  /* background-color: #a7eeee; */
+  /* padding: 0.9rem;
+    margin-bottom: 0.2rem; */
+  border: 0.5px solid white;
+
+  width: 1rem;
+  border-radius: 50%;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number4 {
+  font-size: 0.5rem;
+
+  /* background-color: #a7eeee; */
+  /* padding: 0.9rem;
+    margin-bottom: 0.2rem; */
+  border: 0.5px solid white;
+
+  width: 1rem;
+  border-radius: 50%;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Container-box {
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+.Container-box2 {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+.Container-box3 {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.Container-box4 {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+.main-content {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-right: 0.3rem;
+  padding: 1rem;
+
+  width: 15rem;
+  background-color: rgb(247, 249, 250);
+  justify-content: right;
+  margin-left: 5%;
+  /* align-self: flex-end; */
+}
+.info-display {
+  line-height: 15px;
+}
+.text1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(39, 39, 95);
+}
+.text2 {
+  font-size: 0.5rem;
+  color: rgb(184, 184, 179);
+}
+input {
+  width: 95%;
+  height: 8px;
+  outline: none;
+  font-size: 7px;
+  border: 0.5px solid rgb(194, 191, 191);
+  padding: 5px 5px;
+  border-radius: 3px;
+}
+::placeholder {
+  font-size: 7px; /* Adjust the font size of the placeholder text */
+}
+form:hover {
+  outline: none;
+}
+.flexLabel {
+  position: relative;
+}
+.hiddenPopName,
+.hiddenPopNumber {
+  display: none;
+}
+.popDisplayName,
+.popDisplayNumber {
+  position: absolute;
+  left: 74%;
+  color: red;
+}
+label {
+  font-size: 7px;
+  color: rgb(46, 46, 114);
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.first {
+  line-height: 9px;
+}
+.btn-next {
+  display: flex;
+  margin-left: auto;
+  margin-top: 40px;
+  font-size: 0.4rem;
+  padding: 5px 10px;
+  font-weight: small;
+  color: white;
+  background-color: rgb(39, 39, 95); 
+  border: none;
+  border-radius: 2px;
+  transition: 0.5s ease-in-out;
+}
+.btn-next:hover{
+    background-color: rgb(14, 48, 243);
+}
