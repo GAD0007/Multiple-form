@@ -1,4 +1,8 @@
 "use strict";
+// const number1 =
+ const number1 = document.querySelector('.number');
+ const number2 = document.querySelector('.number2');
+
 
 const inputName = document.getElementById("name--");
 const inputEmail = document.getElementById("email--");
@@ -29,6 +33,9 @@ nextBtn.addEventListener("click", function () {
   } else {
     // Code to execute if both condition1 and condition2 are false
     console.log('next step');
+    number1.style.backgroundColor = 'transparent'
+    number2.style.backgroundColor = '#a7eeee'
+
   }
 
   console.log("Input Value:", outName, outEmail, outNumber);
