@@ -5,7 +5,7 @@ const number2 = document.querySelector(".number2");
 
 //  hidden pages
 
-// document.querySelector(".info-display").classList.remove("hidden-Display-step1");
+document.querySelector(".info-display").classList.remove("hidden-Display-step1");
 const hiddenPage1 = document.querySelector(".info-display");
 const hiddenPage2 = document.querySelector(".info-display2");
 
