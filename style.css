@@ -2,13 +2,13 @@ body {
   /* background-color: rgb(0, 255, 98); */
   overflow-x: hidden;
 
-  max-width: 1400px;
+  /* max-width: 1400px; */
 }
 .whole-section {
   background-color: rgb(247, 246, 246);
 
   display: flex;
-  height: 650px;
+  /* height: 650px; */
   /* margin-top: 1rem; */
   justify-content: center;
   align-items: center;
@@ -37,21 +37,21 @@ body {
   height: 450px;
 
 
-  width: 25rem;
+  width: 26rem;
   background-color: rgb(247, 249, 250);
   justify-content: right;
   margin-left: 5%;
   /* align-self: flex-end; */
 }
 .steps {
-  font-size: 16px;
+  font-size: 0.8rem;
   
   margin-left: 1rem;
   color: rgb(171, 202, 202);
   font-weight: lighter;
 }
 .basic-details {
-  font-size: 15px;
+  font-size: 0.9rem;
   color: white;
   font-weight: bold;
 }
@@ -146,6 +146,10 @@ body {
 }
 .info-display {
   line-height: 20px;
+  /* display: none; */
+}
+.info-display2 {
+  line-height: 20px;
 }
 .text1 {
   font-size: 1.8rem;
@@ -213,4 +217,65 @@ label {
 }
 .btn-next:hover{
     background-color: rgb(14, 48, 243);
+}
+
+/* step 2 page */
+.subscription-boxes{
+  display: flex;
+  /* align-items: center; */
+  height: 12rem;
+}
+.sub-box{
+  width: 30%;
+  height: 9rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-right: 1rem;
+  position: relative;
+  cursor:pointer;
+  border: 1px solid rgb(211, 208, 208);
+}
+.sub-box:hover{
+  /* background-color: rgb(238, 238, 234); */
+  border: 1px solid rgb(75, 77, 197);
+  width: 30%;
+  height: 10rem;
+  transition: 0.3s ease-out;
+
+
+
+
+}
+.sub-box-on-click{
+  background-color: rgb(238, 238, 234);
+  transition: 0.5s ease-in-out;
+  border: 1px solid rgb(75, 77, 197);
+  height: 10rem;
+}
+.sub-box-out-click{
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s;
+  border: 1px solid rgb(211, 208, 208);
+ 
+  height: 9rem;
+}
+/* .sub-box:active{
+  background-color: rgb(189, 189, 10);
+} */
+
+/* hidden pages */
+.hidden-Display-step1{
+  display: none;
+
+}
+.hidden-Display-step2{
+  /* display: none; */
+
+}
+.info-display {
+  line-height: 20px;
+  /* display: none; */
+}
+.info-display2 {
+  line-height: 20px;
 }
