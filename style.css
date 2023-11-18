@@ -275,12 +275,14 @@ font-weight: bold;
   font-size: 0.75rem;
   color: rgb(212, 67, 67);
   font-weight: bold;
-
 }
 .sub-price-details-year{
   position: absolute;
   left: 10%;
   bottom: 12%;
+  font-size: 0.75rem;
+  color: rgb(212, 67, 67);
+  font-weight: bold;
 
 }
 .sub-price-details-year-info{
@@ -289,8 +291,12 @@ font-weight: bold;
   bottom: 2%;
   font-size:0.7rem;
   color:  rgb(39, 39, 95);
-
-
+}
+.year-on-click{
+  visibility: hidden;
+}
+.year-out-click{
+  visibility: hidden;
 }
 /* .sub-box:active{
   background-color: rgb(189, 189, 10);
@@ -301,7 +307,7 @@ font-weight: bold;
   display: none;
 }
 .hidden-Display-step2 {
-  /* display: none; */
+  display: none;
 }
 .info-display {
   line-height: 20px;
@@ -310,8 +316,13 @@ font-weight: bold;
 .info-display2 {
   line-height: 20px;
 }
+.month-year-toggle{
+  width: 92% ;
+}
 .toggle-btn{
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 4px;
   width: 2.5rem;
   height: 1.5rem;

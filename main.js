@@ -5,7 +5,7 @@ const number2 = document.querySelector(".number2");
 
 //  hidden pages
 
-// document.querySelector(".info-display").classList.remove("hidden-Display-step1");
+document.querySelector(".info-display").classList.remove("hidden-Display-step1");
 const hiddenPage1 = document.querySelector(".info-display");
 const hiddenPage2 = document.querySelector(".info-display2");
 
@@ -19,13 +19,23 @@ const redRequired2 = document.querySelector(".popDisplayNumber");
 const arcadeBtn = document.getElementById("arcadeBtn--");
 const advancedBtn = document.getElementById("advancedBtn--");
 const proBtn = document.getElementById("proBtn--");
+// const priceMonth = document.querySelector(".sub-price-details");
+const priceYear = document.querySelectorAll(".sub-price-details-year");
+const priceYearDetails = document.querySelectorAll(".sub-price-details-year-info");
+
 const toggleSub = document.querySelector(".toggle-btn");
 const toggleMonth = document.querySelector(".inner-circle-month");
 const toggleYear = document.querySelector(".inner-circle-year");
+const priceMonth = document.querySelectorAll(".sub-price-details")
+priceMonth.forEach(element => {
+  element.classList.remove('year-out-click');
+})
+
+
 
 
 // making the month toggle visible
-document.querySelector(".inner-circle-month").classList.remove('hidden-month')
+document.querySelector(".inner-circle-month").classList.remove("hidden-month");
 
 // arcadeBtn.value = 9
 // advancedBtn.value = 12
@@ -92,13 +102,35 @@ toggleSub.addEventListener("click", function () {
   if (activeSub === 0) {
     console.log("switch to next");
     activeSub = 1;
-    toggleMonth.classList.add('hidden-month')
-    toggleYear.classList.remove('hidden-year')
+    toggleMonth.classList.add("hidden-month");
+    toggleYear.classList.remove("hidden-year");
+    priceMonth.forEach(element => {
+      element.classList.add('year-out-click');
+    })
+
+    priceYear.forEach(element => {
+      element.classList.remove('year-on-click');
+    })
+    priceYearDetails.forEach(element => {
+      element.classList.remove('year-on-click');
+    })
+   
+   
   } else if (activeSub === 1) {
     console.log("back to prev");
     activeSub = 0;
-    toggleMonth.classList.remove('hidden-month')
-    toggleYear.classList.add('hidden-year')
+    toggleMonth.classList.remove("hidden-month");
+    toggleYear.classList.add("hidden-year");
+    priceMonth.forEach(element => {
+      element.classList.remove('year-out-click');
+    })
+
+    priceYear.forEach(element => {
+      element.classList.add('year-on-click');
+    })
+    priceYearDetails.forEach(element => {
+      element.classList.add('year-on-click');
+    })
   }
 });
 
