@@ -88,18 +88,63 @@
             >You have the option of monthly or yearly billing</span
           >
           <div class="subscription-boxes">
-            <button type="button" class="sub-box"  id="arcadeBtn--">
-              Next step
+            <button type="button" class="sub-box" id="arcadeBtn--">
+              <div class="sub-icon-box">
+                <img
+                  class="sub-icon"
+                  alt="icon-arcade"
+                  src="images/icon-arcade.svg"
+                />
+              </div>
+              <div class="sub-main-details">Arcade</div>
+              <div class="sub-price-details">$9/mo</div>
             </button>
             <button type="button" class="sub-box" id="advancedBtn--">
-              Next step
+              <div class="sub-icon-box">
+                <img
+                  class="sub-icon"
+                  alt="icon-advanced"
+                  src="images/icon-advanced.svg"
+                />
+              </div>
+              <div class="sub-main-details">Advanced</div>
+              <div class="sub-price-details">$12/mo</div>
             </button>
             <button type="button" class="sub-box" id="proBtn--">
-              Next step
+              <div class="sub-icon-box">
+                <img
+                  class="sub-icon"
+                  alt="icon-pro"
+                  src="images/icon-pro.svg"
+                />
+              </div>
+              <div class="sub-main-details">Pro</div>
+              <div class="sub-price-details">$15/mo</div>
+              <div class="sub-price-details-year">$150/mo</div>
+              <div class="sub-price-details-year-info">2 months free</div>
+
+
             </button>
           </div>
           <div class="display click">
-            <div class="sub-type"><span class="sub-month"></span><span class="sub-price"></span></div>
+            <div class="sub-type">
+              <span class="sub-month"></span><span class="sub-price"></span>
+            </div>
+          </div>
+          <div class="month-year-toggle">
+            <button class="toggle-btn">
+              <div class="inner-circle-month hidden-month"></div>
+              <div class="inner-circle-year hidden-year"></div>
+            </button>
+          </div>
+
+          <div class="prev-next-btn">
+            <button type="button" class="btn-prev-step1" id="btn--2">
+              Go back
+            </button>
+            <button type="button" class="btn-next-step3" id="btn--3">
+              Next step
+            </button>
           </div>
         </div>
       </div>
