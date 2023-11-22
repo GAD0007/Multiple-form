@@ -221,7 +221,7 @@ label {
 .subscription-boxes {
   display: flex;
   /* align-items: center; */
-  height: 12rem;
+  height: 10rem;
 }
 .sub-box {
   width: 28%;
@@ -241,7 +241,8 @@ label {
   transition: 0.3s ease;
 }
 .sub-box-on-click {
-  background-color: rgb(238, 238, 234);
+  background-color: rgb(227, 238, 241);
+
   transition: 0.5s ease-in-out;
   border: 1px solid rgb(75, 77, 197);
   height: 8.5rem;
@@ -268,7 +269,23 @@ bottom: 27%;
 color:  rgb(39, 39, 95);
 font-weight: bold;
 }
-.sub-price-details{
+.sub-price-details1{
+  position: absolute;
+  left: 10%;
+  bottom: 12%;
+  font-size: 0.75rem;
+  color: rgb(212, 67, 67);
+  font-weight: bold;
+}
+.sub-price-details2{
+  position: absolute;
+  left: 10%;
+  bottom: 12%;
+  font-size: 0.75rem;
+  color: rgb(212, 67, 67);
+  font-weight: bold;
+}
+.sub-price-details3{
   position: absolute;
   left: 10%;
   bottom: 12%;
@@ -295,9 +312,9 @@ font-weight: bold;
 .year-on-click{
   visibility: hidden;
 }
-.year-out-click{
+/* .year-out-click{
   visibility: hidden;
-}
+} */
 /* .sub-box:active{
   background-color: rgb(189, 189, 10);
 } */
@@ -309,20 +326,49 @@ font-weight: bold;
 .hidden-Display-step2 {
   display: none;
 }
+.hidden-Display-step3 {
+  display: none;
+}
 .info-display {
   line-height: 20px;
   /* display: none; */
 }
-.info-display2 {
-  line-height: 20px;
-}
+
 .month-year-toggle{
-  width: 92% ;
+  width: 88% ;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(227, 238, 241);
+  padding: 0.5rem;
+}
+.toggle-details1{
+  margin-top: 2px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: rgb(184, 184, 179);
+
+}
+.toggle-details2{
+  margin-top: 2px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: rgb(184, 184, 179);
+
+}
+.monthly-blue{
+  color:  rgb(39, 39, 95);
+
+}
+.yearly-blue{
+  color:  rgb(39, 39, 95);
+
 }
 .toggle-btn{
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 1rem;
+
+  /* margin-left: auto;
+  margin-right: auto; */
   padding-top: 4px;
   width: 2.5rem;
   height: 1.5rem;
@@ -355,11 +401,41 @@ font-weight: bold;
 .prev-next-btn{
   display: flex;
   width: 92%;
+  margin-top: 5rem;
+}
+.go-back{
+  margin-top: auto;
+  color: rgb(184, 184, 179);
+  text-decoration: none;
 }
 .btn-prev-step1{
+  background-color: none;
+  padding: none;
+
   
 }
 .btn-next-step3{
 margin-left: auto;
 
+}
+.required-text{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: red;
+  font-weight: bold;
+  font-size: small;
+
+}
+/* step 3 */
+.add-box{
+  width: 90%;
+  height: 4rem;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid rgb(204, 202, 202);
+  margin-bottom: 15px;
+
+}
+.adds-on-boxes{
+  margin-top: 30px;
 }
