@@ -7,14 +7,45 @@ const number3 = document.querySelector(".number3");
 
 //  hidden pages
 
-document.querySelector(".info-display").classList.add("hidden-Display-step1");
+document.querySelector(".info-display").classList.remove("hidden-Display-step1");
+document.querySelector(".adds-on-price-year").classList.add("year-price-hidden");
+document.querySelector(".adds-on-price-month").classList.remove("month-price-hidden");
+document.querySelector(".adds-on-price-year1").classList.add("year-price-hidden1");
+document.querySelector(".adds-on-price-month1").classList.remove("month-price-hidden1");
+document.querySelector(".adds-on-price-year2").classList.add("year-price-hidden2");
+document.querySelector(".adds-on-price-month2").classList.remove("month-price-hidden2");
+document.querySelector(".empty-check-box").style.backgroundColor = "transparent";
+document.querySelector(".empty-check-box1").style.backgroundColor = "transparent";
+document.querySelector(".empty-check-box2").style.backgroundColor = "transparent";
+
+document.querySelector(".add-box").classList.remove("box-style");
+document.querySelector(".add-box1").classList.remove("box-style");
+document.querySelector(".add-box2").classList.remove("box-style");
+
+const onlineServiceChoiceDisplay = document.querySelector(".display-adds-ons-online")
+const largerServiceChoiceDisplay = document.querySelector(".display-adds-ons-larger")
+const customizableServiceChoiceDisplay = document.querySelector(".display-adds-ons-customize")
+
+const priceTagOnlineService = document.querySelector(".adds-on-price-month")
+const priceTagLargerService = document.querySelector(".adds-on-price-month1")
+const priceTagCustomizeService = document.querySelector(".adds-on-price-month2")
+
+
+
+
+
+
+
+
+
+
 
 const hiddenPage1 = document.querySelector(".info-display");
 const hiddenPage2 = document.querySelector(".info-display2");
 const hiddenPage3 = document.querySelector(".info-display3");
 // bsbsbsbsb
 hiddenPage2.classList.add('hidden-Display-step2')
-hiddenPage3.classList.remove('hidden-Display-step3')
+hiddenPage3.classList.add('hidden-Display-step3')
 const blueMonth = document.querySelector(".toggle-details1");
 const blueYear = document.querySelector(".toggle-details2");
 blueYear.classList.remove("yearly-blue");
@@ -47,9 +78,20 @@ const priceMonthArcade = document.querySelector(".sub-price-details1");
 const priceMonthAdvanced = document.querySelector(".sub-price-details2");
 const priceMonthPro = document.querySelector(".sub-price-details3");
 
-// priceMonth.forEach(element => {
-//   element.classList.remove('year-out-click');
-// })
+// buttons on step 3
+const onlineService = document.getElementById("onlineService--");
+const largerService = document.getElementById("LargerStorage--");
+const customProfile = document.getElementById("customizableProfile--");
+
+
+const checkBackground = document.querySelector(".empty-check-box")
+const checkBackground1 = document.querySelector(".empty-check-box1")
+const checkBackground2 = document.querySelector(".empty-check-box2")
+const previousStep2 = document.getElementById("btn--4");
+const nextBtnStep3 = document.getElementById("btn--5");
+
+
+
 
 // making the month toggle visible
 document.querySelector(".inner-circle-month").classList.remove("hidden-month");
@@ -141,7 +183,12 @@ toggleSub.addEventListener("click", function () {
 
     priceYearDetails.forEach((element) => {
       element.classList.remove("year-on-click");
+      
+      
     });
+    priceTagOnlineService.textContent = '$10/yr'
+    priceTagLargerService.textContent = '$20/yr'
+    priceTagCustomizeService.textContent = '$30/yr'
     priceForYear();
   } else if (activeSub === 1) {
     console.log("back to prev");
@@ -154,6 +201,9 @@ toggleSub.addEventListener("click", function () {
     priceYearDetails.forEach((element) => {
       element.classList.add("year-on-click");
     });
+    priceTagOnlineService.textContent = '$1/mo'
+priceTagLargerService.textContent = '$2/mo'
+priceTagCustomizeService.textContent = '$3/mo'
     priceForMonth();
   }
 });
@@ -225,9 +275,93 @@ nextBtnStep2.addEventListener("click", function name(params) {
     number1.style.backgroundColor = "transparent";
     number2.style.backgroundColor = "transparent";
     number3.style.backgroundColor = "#a7eeee";
+redRequired3.textContent = 'You have selected a plan'
+
 
     console.log("hmm");
   } else {
 redRequired3.textContent = 'Please select a plan to proceed'
   }
 });
+// online button selector on step 3
+let clickCount = 0
+let clickCount1 = 0
+let clickCount2 = 0
+
+onlineService.addEventListener('click',function () {
+  clickCount++
+checkBackground.style.backgroundColor = "#0000FF";
+document.querySelector(".add-box").classList.add("box-style");
+onlineServiceChoiceDisplay.textContent = priceTagOnlineService.textContent
+if (clickCount === 2) {
+  clickCount = 0
+  checkBackground.style.backgroundColor = "transparent";
+document.querySelector(".add-box").classList.remove("box-style")
+onlineServiceChoiceDisplay.textContent = ''
+  console.log('Button clicked the second time or beyond.');
+
+
+}
+
+
+  console.log('ggsgsg');
+  
+})
+largerService.addEventListener('click',function () {
+  clickCount1++
+checkBackground1.style.backgroundColor = "#0000FF";
+document.querySelector(".add-box1").classList.add("box-style");
+largerServiceChoiceDisplay.textContent = priceTagLargerService.textContent
+
+if (clickCount1 === 2) {
+  clickCount1 = 0
+  checkBackground1.style.backgroundColor = "transparent";
+document.querySelector(".add-box1").classList.remove("box-style")
+largerServiceChoiceDisplay.textContent = ''
+  console.log('Button clicked the second time or beyond.');
+
+
+}
+
+
+  console.log('ggsgsg');
+  
+})
+customProfile.addEventListener('click',function () {
+  clickCount2++
+checkBackground2.style.backgroundColor = "#0000FF";
+document.querySelector(".add-box2").classList.add("box-style");
+customizableServiceChoiceDisplay.textContent = priceTagCustomizeService.textContent
+
+if (clickCount2 === 2) {
+  clickCount2 = 0
+  checkBackground2.style.backgroundColor = "transparent";
+document.querySelector(".add-box2").classList.remove("box-style")
+customizableServiceChoiceDisplay.textContent = ''
+  console.log('Button clicked the second time or beyond.');
+
+
+}
+
+
+  console.log('ggsgsg');
+  
+})
+// previous page btn to step 2
+previousStep2.addEventListener("click", function () {
+  event.preventDefault();
+  hiddenPage2.classList.remove("hidden-Display-step2");
+  hiddenPage3.classList.add("hidden-Display-step3");
+  number2.style.backgroundColor = "#a7eeee";
+  number3.style.backgroundColor = "transparent";
+
+
+  // switch to step 2
+});
+
+// next btn to summary page
+nextBtnStep3.addEventListener('click',function () {
+  console.log('gsggsgcc');
+  
+})
+

@@ -1,6 +1,8 @@
 body {
   /* background-color: rgb(0, 255, 98); */
   overflow-x: hidden;
+  /* overflow-y: hidden; */
+
 
   /* max-width: 1400px; */
 }
@@ -8,7 +10,7 @@ body {
   background-color: rgb(247, 246, 246);
 
   display: flex;
-  /* height: 650px; */
+  height: 650px;
   /* margin-top: 1rem; */
   justify-content: center;
   align-items: center;
@@ -403,6 +405,11 @@ font-weight: bold;
   width: 92%;
   margin-top: 5rem;
 }
+.prev-next-btn1{
+  display: flex;
+  width: 92%;
+  margin-top: 2rem;
+}
 .go-back{
   margin-top: auto;
   color: rgb(184, 184, 179);
@@ -429,13 +436,213 @@ margin-left: auto;
 /* step 3 */
 .add-box{
   width: 90%;
-  height: 4rem;
+  height: 3.5rem;
   border-radius: 10px;
   background-color: white;
   border: 1px solid rgb(204, 202, 202);
   margin-bottom: 15px;
+  position: relative;
 
+
+}
+.add-box1{
+  width: 90%;
+  height: 3.5rem;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid rgb(204, 202, 202);
+  margin-bottom: 15px;
+  position: relative;
+
+
+}
+.add-box2{
+  width: 90%;
+  height: 3.5rem;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid rgb(204, 202, 202);
+  margin-bottom: 15px;
+  position: relative;
+
+
+}
+.box-style{
+  background-color: rgb(227, 238, 241);
+  border: 1px solid rgb(101, 101, 209);
+}
+.box-style1{
+  background-color: rgb(227, 238, 241);
+  border: 1px solid rgb(101, 101, 209);
+}
+.box-style2{
+  background-color: rgb(227, 238, 241);
+  border: 1px solid rgb(101, 101, 209);
 }
 .adds-on-boxes{
   margin-top: 30px;
+}
+.empty-check-box{
+  width: 15px;
+  height: 15px;
+  background-color: rgb(40, 37, 224);
+  border-radius: 5px;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  border: 1px solid rgb(204, 202, 202);
+}
+.empty-check-box1{
+  width: 15px;
+  height: 15px;
+  background-color: rgb(40, 37, 224);
+  border-radius: 5px;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  border: 1px solid rgb(204, 202, 202);
+}
+.empty-check-box2{
+  width: 15px;
+  height: 15px;
+  background-color: rgb(40, 37, 224);
+  border-radius: 5px;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  border: 1px solid rgb(204, 202, 202);
+}
+.check{
+  width: 15px;
+}
+.check1{
+  width: 15px;
+}
+.check2{
+  width: 15px;
+}
+/* .hidden-mark{
+  display: none;
+} */
+.adds-on-details-1{
+  color: rgb(39, 39, 95);
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+.adds-on-details-3{
+  color: rgb(39, 39, 95);
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+.adds-on-details-5{
+  color: rgb(39, 39, 95);
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+.adds-on-details-2{
+  color: rgb(184, 184, 179);
+  font-size: 0.7rem;
+  top: 58%;
+  left: 15%;
+  position: absolute;
+
+
+
+}
+.adds-on-details-4{
+  color: rgb(184, 184, 179);
+  font-size: 0.7rem;
+  top: 58%;
+  left: 15%;
+  position: absolute;
+
+
+
+}
+.adds-on-details-6{
+  color: rgb(184, 184, 179);
+  font-size: 0.7rem;
+  top: 58%;
+  left: 15%;
+  position: absolute;
+
+
+
+}
+.adds-on-price-month{
+  color: blue;
+  top: 40%;
+  left: 84%;
+  position: absolute;
+  font-size:0.8rem ;
+
+
+}
+.adds-on-price-month1{
+  color: blue;
+  top: 40%;
+  left: 84%;
+  position: absolute;
+  font-size:0.8rem ;
+
+}
+.adds-on-price-month2{
+  color: blue;
+  top: 40%;
+  left: 84%;
+  position: absolute;
+  font-size:0.8rem ;
+
+
+}
+.adds-on-price-year{
+  color: blue;
+  top: 40%;
+  left: 83%;
+  position: absolute;
+  font-weight: bold;
+
+}
+.adds-on-price-year1{
+  color: blue;
+  top: 40%;
+  left: 83%;
+  position: absolute;
+  font-weight: bold;
+
+}
+.adds-on-price-year2{
+  color: blue;
+  top: 40%;
+  left: 83%;
+  position: absolute;
+  font-weight: bold;
+
+}
+.year-price-hidden{
+  display: none;
+}
+.month-price-hidden{
+  display: none;
+}
+.year-price-hidden1{
+  display: none;
+}
+.month-price-hidden1{
+  display: none;
+}
+.year-price-hidden2{
+  display: none;
+}
+.month-price-hidden2{
+  display: none;
 }
