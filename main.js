@@ -3,11 +3,13 @@
 const number1 = document.querySelector(".number");
 const number2 = document.querySelector(".number2");
 const number3 = document.querySelector(".number3");
+const number4 = document.querySelector(".number4");
+
 
 
 //  hidden pages
 
-document.querySelector(".info-display").classList.remove("hidden-Display-step1");
+document.querySelector(".info-display").classList.add("hidden-Display-step1");
 document.querySelector(".adds-on-price-year").classList.add("year-price-hidden");
 document.querySelector(".adds-on-price-month").classList.remove("month-price-hidden");
 document.querySelector(".adds-on-price-year1").classList.add("year-price-hidden1");
@@ -43,9 +45,13 @@ const priceTagCustomizeService = document.querySelector(".adds-on-price-month2")
 const hiddenPage1 = document.querySelector(".info-display");
 const hiddenPage2 = document.querySelector(".info-display2");
 const hiddenPage3 = document.querySelector(".info-display3");
+const hiddenPage4 = document.querySelector(".info-display4");
+
 // bsbsbsbsb
-hiddenPage2.classList.add('hidden-Display-step2')
-hiddenPage3.classList.add('hidden-Display-step3')
+hiddenPage2.classList.remove('hidden-Display-step2')
+hiddenPage3.classList.remove('hidden-Display-step3')
+hiddenPage4.classList.remove('hidden-Display-step4')
+
 const blueMonth = document.querySelector(".toggle-details1");
 const blueYear = document.querySelector(".toggle-details2");
 blueYear.classList.remove("yearly-blue");
@@ -361,6 +367,13 @@ previousStep2.addEventListener("click", function () {
 
 // next btn to summary page
 nextBtnStep3.addEventListener('click',function () {
+  number1.style.backgroundColor = "transparent";
+  number2.style.backgroundColor = "transparent";
+  number3.style.backgroundColor = "#transparent";
+  number4.style.backgroundColor = "#a7eeee";
+
+  hiddenPage3.classList.add('hidden-Display-step3')
+hiddenPage4.classList.remove('hidden-Display-step4')
   console.log('gsggsgcc');
   
 })
