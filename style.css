@@ -649,3 +649,11 @@ margin-left: auto;
 .month-price-hidden2{
   display: none;
 }
+.sub-type{
+  
+}
+.display-click{
+  position: relative; 
+  width: 90%;
+  height: 110px;
+}

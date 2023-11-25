@@ -97,6 +97,13 @@ const previousStep2 = document.getElementById("btn--4");
 const nextBtnStep3 = document.getElementById("btn--5");
 
 
+const subNameDisplay = document.querySelector(".sub-type-name");
+const subMonthDisplay = document.querySelector(".month-year");
+const DisplayAddsOnline = document.querySelector(".display-online-details");
+const DisplayAddsLarger = document.querySelector(".display-larger-details");
+const DisplayAddsCustomize = document.querySelector(".display-customize-details");
+
+
 
 
 // making the month toggle visible
@@ -121,6 +128,7 @@ const priceForYear = function () {
   } else if (subDisplay.textContent == "$15/mo") {
     subDisplay.textContent = priceMonthPro.textContent;
   }
+  subMonthDisplay.textContent = '(Yearly)'
 };
 
 // price for month function on step 2
@@ -138,6 +146,8 @@ const priceForMonth = function () {
   } else if (subDisplay.textContent == "$150/yr") {
     subDisplay.textContent = priceMonthPro.textContent;
   }
+  subMonthDisplay.textContent = '(Month)'
+
 };
 
 // arcade button
@@ -147,6 +157,7 @@ arcadeBtn.addEventListener("click", function () {
   advancedBtn.classList.remove("sub-box-on-click");
   proBtn.classList.remove("sub-box-on-click");
   subDisplay.textContent = priceMonthArcade.textContent;
+  subNameDisplay.textContent = 'Arcade'
 
   // arcadeBtn.classList.remove('.sub-box-on-click')
 
@@ -161,6 +172,8 @@ advancedBtn.addEventListener("click", function () {
   arcadeBtn.classList.remove("sub-box-on-click");
   proBtn.classList.remove("sub-box-on-click");
   subDisplay.textContent = priceMonthAdvanced.textContent;
+  subNameDisplay.textContent = 'Advanced'
+
 
   console.log(advancedBtnValue);
 });
@@ -172,6 +185,8 @@ proBtn.addEventListener("click", function () {
   arcadeBtn.classList.remove("sub-box-on-click");
   advancedBtn.classList.remove("sub-box-on-click");
   subDisplay.textContent = priceMonthPro.textContent;
+  subNameDisplay.textContent = 'Pro'
+
 
   console.log(proBtnValue);
 });
@@ -299,11 +314,14 @@ onlineService.addEventListener('click',function () {
 checkBackground.style.backgroundColor = "#0000FF";
 document.querySelector(".add-box").classList.add("box-style");
 onlineServiceChoiceDisplay.textContent = priceTagOnlineService.textContent
+DisplayAddsOnline.textContent = 'Online service'
+
 if (clickCount === 2) {
   clickCount = 0
   checkBackground.style.backgroundColor = "transparent";
 document.querySelector(".add-box").classList.remove("box-style")
 onlineServiceChoiceDisplay.textContent = ''
+DisplayAddsOnline.textContent = ''
   console.log('Button clicked the second time or beyond.');
 
 
@@ -318,12 +336,16 @@ largerService.addEventListener('click',function () {
 checkBackground1.style.backgroundColor = "#0000FF";
 document.querySelector(".add-box1").classList.add("box-style");
 largerServiceChoiceDisplay.textContent = priceTagLargerService.textContent
+DisplayAddsLarger.textContent = 'Larger service'
+
 
 if (clickCount1 === 2) {
   clickCount1 = 0
   checkBackground1.style.backgroundColor = "transparent";
 document.querySelector(".add-box1").classList.remove("box-style")
 largerServiceChoiceDisplay.textContent = ''
+DisplayAddsLarger.textContent = ''
+
   console.log('Button clicked the second time or beyond.');
 
 
@@ -338,12 +360,16 @@ customProfile.addEventListener('click',function () {
 checkBackground2.style.backgroundColor = "#0000FF";
 document.querySelector(".add-box2").classList.add("box-style");
 customizableServiceChoiceDisplay.textContent = priceTagCustomizeService.textContent
+DisplayAddsCustomize.textContent = 'Customize service'
 
 if (clickCount2 === 2) {
   clickCount2 = 0
   checkBackground2.style.backgroundColor = "transparent";
 document.querySelector(".add-box2").classList.remove("box-style")
 customizableServiceChoiceDisplay.textContent = ''
+DisplayAddsCustomize.textContent = ''
+
+
   console.log('Button clicked the second time or beyond.');
 
 
@@ -367,6 +393,11 @@ previousStep2.addEventListener("click", function () {
 
 // next btn to summary page
 nextBtnStep3.addEventListener('click',function () {
+  let subValue= 0
+  let onlineServiceValue = 0
+  let largerServiceValue = 0
+  let customizableServiceValue = 0
+
   number1.style.backgroundColor = "transparent";
   number2.style.backgroundColor = "transparent";
   number3.style.backgroundColor = "#transparent";
@@ -374,7 +405,54 @@ nextBtnStep3.addEventListener('click',function () {
 
   hiddenPage3.classList.add('hidden-Display-step3')
 hiddenPage4.classList.remove('hidden-Display-step4')
-  console.log('gsggsgcc');
+if (subDisplay.textContent) {
+  if (subDisplay.textContent == "$9/mo" ) {
+    subValue=9
+    
+    
+  } else if (subDisplay.textContent == "$90/yr") {
+    subValue=90
+    
+  }
+  else if (subDisplay.textContent == "$12/mo") {
+    subValue=12
+    
+  }
+  else if (subDisplay.textContent == "$120/yr") {
+    subValue=120
+    
+  }else if (subDisplay.textContent == "$15/mo") {
+    subValue=15
+    
+  }else if (subDisplay.textContent == "$150/yr") {
+    subValue=150
+    
+  }
+
+}
+if(onlineServiceChoiceDisplay.textContent){
+  if (onlineServiceChoiceDisplay.textContent == "$10/yr") {
+    onlineServiceValue = 10
+  } else ( onlineServiceValue = 1)
+
+}
+if(customizableServiceChoiceDisplay.textContent){
+  if (customizableServiceChoiceDisplay.textContent == "$30/yr") {
+    customizableServiceValue = 10
+  } else ( customizableServiceValue = 1)
+
+}
+if(largerServiceChoiceDisplay.textContent){
+  if (largerServiceChoiceDisplay.textContent == "$20/yr") {
+    largerServiceValue = 20
+  } else ( largerServiceValue = 2)
+
+}
+  console.log( subValue);
+  console.log( onlineServiceValue);
+  console.log( customizableServiceValue);
+  console.log( largerServiceValue);
+
   
 })
 
