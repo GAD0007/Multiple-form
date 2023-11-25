@@ -32,6 +32,7 @@ body {
   background-color: aliceblue;
 }
 .main-content {
+  position: relative;
   margin-top: 4rem;
   margin-bottom: 0.3rem;
   margin-right: 0.3rem;
@@ -334,6 +335,11 @@ font-weight: bold;
 .hidden-Display-step4 {
   display: none;
 }
+.hidden-Display-step5 {
+  display: none;
+}
+
+
 .info-display {
   line-height: 20px;
   /* display: none; */
@@ -371,6 +377,8 @@ font-weight: bold;
 .toggle-btn{
   display: flex;
   margin: 0 1rem;
+  cursor: pointer;
+
 
   /* margin-left: auto;
   margin-right: auto; */
@@ -406,12 +414,17 @@ font-weight: bold;
 .prev-next-btn{
   display: flex;
   width: 92%;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .prev-next-btn1{
   display: flex;
   width: 92%;
   margin-top: 2rem;
+}
+.prev-next-btn2{
+  display: flex;
+  width: 90%;
+  margin-top: 0.3rem;
 }
 .go-back{
   margin-top: auto;
@@ -650,10 +663,179 @@ margin-left: auto;
   display: none;
 }
 .sub-type{
+  position: absolute;
+  font-size: 1rem;
+  top: 35%;
+  right: 5%;
+  color: rgb(39, 39, 95);
+  font-weight: bold;
+
   
+}
+.add-box,.add-box1,.add-box2{
+  cursor: pointer;
+}
+.change-sub-btn{
+  cursor: pointer;
+}
+a.change-link{
+  position: absolute;
+  text-decoration: underline;
+  color: rgb(172, 171, 169);
+  font-size: 0.9rem;
+  top:65%;
+  left:5%;
 }
 .display-click{
   position: relative; 
   width: 90%;
-  height: 110px;
+  height: 50px;
+  background-color: rgb(237, 242, 243);
+  border-radius: 10px 10px 0px 0px;
+  margin-top: 30px;
+
+
+}
+.display-click2{
+  position: relative; 
+  width: 90%;
+  height: 130px;
+  background-color: rgb(235, 241, 243);
+  border-radius: 0px 0px 10px 10px;
+  padding-bottom: 20px;
+}
+.display-click3{
+  position: relative; 
+  width: 90%;
+  height: 30px;
+  background-color: rgb(253, 253, 253);
+  border-radius: 0px 0px 10px 10px;
+  margin-top: 30px;
+}
+.totalSub{
+  position: absolute;
+  left: 5%;
+  color:rgb(151, 151, 153); 
+  font-weight: bold;
+}
+.greyMonth{
+  color:rgb(151, 151, 153)
+
+}
+.finalTotalValue{
+  position: absolute;
+  font-size: 1.2rem;
+
+  right: 5%;
+  color: rgb(31, 31, 212);
+  font-weight: bold;
+
+}
+
+.line{
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background-color: rgb(148, 146, 146);
+  top: 19%;
+  left: 5%;
+}
+.name-of-sub-and-month{
+  position: absolute;
+  top: 30%;
+   left: 5%;
+   /* font-size: 1.1rem; */
+    color: rgb(39, 39, 95);
+    font-weight: bold;
+
+}
+.month-year{
+  /* position: absolute; */
+  top: 12%;
+   left: 17%;
+   font-size: 0.8rem;
+    color: rgb(39, 39, 95);
+    font-weight: bold;
+
+}
+.month-year2{
+  /* position: absolute; */
+  top: 12%;
+   left: 17%;
+   font-size: 0.8rem;
+    font-weight: bold;
+
+}
+.display-adds-ons-online{
+ 
+    
+    position: absolute;
+    font-size: 0.9rem;
+
+    top: 40%;
+    right: 5%;
+    color: rgb(39, 39, 95);
+  /* font-weight: bold; */
+
+
+}
+.display-adds-ons-larger{
+  position: absolute;
+  font-size: 0.9rem;
+
+  top: 60%;
+  right: 5%;
+  color: rgb(39, 39, 95);
+  /* font-weight: bold; */
+
+}
+.display-online-details{
+  position: absolute;
+  top: 40%;
+   left: 5%;
+   font-size: 1rem;
+    color: rgb(145, 145, 148);
+
+}
+.display-larger-details{
+  position: absolute;
+  top: 60%;
+   left: 5%;
+   font-size: 1rem;
+    color: rgb(145, 145, 148);
+
+}
+.display-customize-details{
+  position: absolute;
+  top: 80%;
+   left: 5%;
+   font-size: 1rem;
+    color: rgb(145, 145, 148);
+
+}
+.display-adds-ons-customize{
+  position: absolute;
+  font-size: 0.9rem;
+  top: 80%;
+  right: 5%;
+  color: rgb(39, 39, 95);
+  /* font-weight: bold; */
+
+}
+.thanks-img{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+.thank-you-text{
+  display: flex;
+text-align: center;
+  width: 90%;
+  font-size: medium;
+  color: rgb(127, 129, 129);
+  margin-top: 20px;
+}
+.info-display5{
+  padding-top: 120px;
+
 }
