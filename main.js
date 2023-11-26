@@ -135,11 +135,11 @@ const priceForYear = function () {
   priceMonthPro.textContent = "$150/yr";
   if (subDisplay.textContent == "$9/mo") {
     subDisplay.textContent = priceMonthArcade.textContent;
-    console.log(`9 dolls`);
+    // console.log(`9 dolls`);
   } else if (subDisplay.textContent == "$12/mo") {
     subDisplay.textContent = priceMonthAdvanced.textContent;
 
-    console.log("12 dolls");
+    // console.log("12 dolls");
   } else if (subDisplay.textContent == "$15/mo") {
     subDisplay.textContent = priceMonthPro.textContent;
   }
@@ -155,11 +155,11 @@ const priceForMonth = function () {
   priceMonthPro.textContent = "$15/mo";
   if (subDisplay.textContent == "$90/yr") {
     subDisplay.textContent = priceMonthArcade.textContent;
-    console.log(`9 dolls`);
+    // console.log(`9 dolls`);
   } else if (subDisplay.textContent == "$120/yr") {
     subDisplay.textContent = priceMonthAdvanced.textContent;
 
-    console.log("12 dolls");
+    // console.log("12 dolls");
   } else if (subDisplay.textContent == "$150/yr") {
     subDisplay.textContent = priceMonthPro.textContent;
   }
@@ -181,7 +181,7 @@ arcadeBtn.addEventListener("click", function () {
 
   // arcadeBtn.classList.remove('.sub-box-on-click')
 
-  console.log(arcadeBtnValue);
+  // console.log(arcadeBtnValue);
 });
 
 // advanced button
@@ -195,7 +195,7 @@ advancedBtn.addEventListener("click", function () {
   subNameDisplay.textContent = 'Advanced'
 
 
-  console.log(advancedBtnValue);
+  // console.log(advancedBtnValue);
 });
 
 // pro button
@@ -208,14 +208,14 @@ proBtn.addEventListener("click", function () {
   subNameDisplay.textContent = 'Pro'
 
 
-  console.log(proBtnValue);
+  // console.log(proBtnValue);
 });
 
 // toggle button
 let activeSub = 0;
 toggleSub.addEventListener("click", function () {
   if (activeSub === 0) {
-    console.log("switch to next");
+    // console.log("switch to next");
     activeSub = 1;
     toggleMonth.classList.add("hidden-month");
     toggleYear.classList.remove("hidden-year");
@@ -232,7 +232,7 @@ toggleSub.addEventListener("click", function () {
     priceTagCustomizeService.textContent = '$30/yr'
     priceForYear();
   } else if (activeSub === 1) {
-    console.log("back to prev");
+    // console.log("back to prev");
     activeSub = 0;
     toggleMonth.classList.remove("hidden-month");
     toggleYear.classList.add("hidden-year");
@@ -273,7 +273,7 @@ nextBtnStep1.addEventListener("click", function () {
   } else {
     // Code to execute if both condition1 and condition2 are false
 
-    console.log("next step");
+    // console.log("next step");
     number1.style.backgroundColor = "transparent";
     number2.style.backgroundColor = "#a7eeee";
 
@@ -284,7 +284,7 @@ nextBtnStep1.addEventListener("click", function () {
     // inputName.value = outName.value
   }
 
-  console.log("Input Value:", outName, outEmail, outNumber);
+  // console.log("Input Value:", outName, outEmail, outNumber);
 
   //  console.log(inputValue);
 });
@@ -319,7 +319,7 @@ nextBtnStep2.addEventListener("click", function name(params) {
 redRequired3.textContent = 'You have selected a plan'
 
 
-    console.log("hmm");
+    // console.log("hmm");
   } else {
 redRequired3.textContent = 'Please select a plan to proceed'
   }
@@ -342,13 +342,13 @@ if (clickCount === 2) {
 document.querySelector(".add-box").classList.remove("box-style")
 onlineServiceChoiceDisplay.textContent = ''
 DisplayAddsOnline.textContent = ''
-  console.log('Button clicked the second time or beyond.');
+  // console.log('Button clicked the second time or beyond.');
 
 
 }
 
 
-  console.log('ggsgsg');
+  // console.log('ggsgsg');
   
 })
 largerService.addEventListener('click',function () {
@@ -366,13 +366,13 @@ document.querySelector(".add-box1").classList.remove("box-style")
 largerServiceChoiceDisplay.textContent = ''
 DisplayAddsLarger.textContent = ''
 
-  console.log('Button clicked the second time or beyond.');
+  // console.log('Button clicked the second time or beyond.');
 
 
 }
 
 
-  console.log('ggsgsg');
+  // console.log('ggsgsg');
   
 })
 customProfile.addEventListener('click',function () {
@@ -390,13 +390,13 @@ customizableServiceChoiceDisplay.textContent = ''
 DisplayAddsCustomize.textContent = ''
 
 
-  console.log('Button clicked the second time or beyond.');
+  // console.log('Button clicked the second time or beyond.');
 
 
 }
 
 
-  console.log('ggsgsg');
+  // console.log('ggsgsg');
   
 })
 // previous page btn to step 2
@@ -480,10 +480,10 @@ if(customizableServiceChoiceDisplay.textContent){
   } else ( customizableServiceValue = 3)
 
 }
-  console.log( subValue);
-  console.log( onlineServiceValue);
-  console.log( largerServiceValue);
-  console.log( customizableServiceValue);
+  // console.log( subValue);
+  // console.log( onlineServiceValue);
+  // console.log( largerServiceValue);
+  // console.log( customizableServiceValue);
   const totalValueFinally = subValue + onlineServiceValue + customizableServiceValue + largerServiceValue
   totalAtEnd.textContent = totalValueFinally
 
