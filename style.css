@@ -911,7 +911,7 @@ display: none;  }
     /* background-position: center; */
     height: 206px;
   
-    width: 26rem;
+    width: 27rem;
 
     /* background-color: rgb(128, 178, 190); */
     right: 15px;
@@ -930,7 +930,7 @@ display: none;  }
   padding: 2rem;
   height: 350px;
 
-  width: 18rem;
+  width: 19rem;
   box-shadow: 0px 0.2rem 0px 1px rgb(107, 106, 106);
   background-color:hsl(0, 0%, 100%) ;
    justify-content:center;
