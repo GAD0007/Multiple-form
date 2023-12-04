@@ -146,6 +146,27 @@ const priceForYear = function () {
   subMonthDisplay.textContent = '(Yearly)'
   document.querySelector('.month-year2').textContent = '(per year)'
   monthYearEndDisplay.textContent = 'yr'
+  // priceTagOnlineService.textContent = '$10/yr'
+
+ if (onlineServiceChoiceDisplay.textContent) {
+   if (onlineServiceChoiceDisplay.textContent = '$1/mo') {
+     
+     onlineServiceChoiceDisplay.textContent = priceTagOnlineService.textContent
+   }
+ }
+ if (largerServiceChoiceDisplay.textContent) {
+   if (largerServiceChoiceDisplay.textContent = '$2/mo') {
+     
+     largerServiceChoiceDisplay.textContent = priceTagLargerService.textContent
+   }
+ }
+ if (customizableServiceChoiceDisplay.textContent) {
+   if (customizableServiceChoiceDisplay.textContent = '$3/mo') {
+     
+     customizableServiceChoiceDisplay.textContent = priceTagCustomizeService.textContent
+   }
+ }
+  
 };
 
 // price for month function on step 2
@@ -165,8 +186,26 @@ const priceForMonth = function () {
   }
   document.querySelector('.month-year2').textContent = '(per month)'
 
-  subMonthDisplay.textContent = '(Month)'
+  subMonthDisplay.textContent = '(Monthly)'
   monthYearEndDisplay.textContent = 'mo'
+  if (onlineServiceChoiceDisplay.textContent) {
+    if (onlineServiceChoiceDisplay.textContent = '$10/yr') {
+      
+      onlineServiceChoiceDisplay.textContent = priceTagOnlineService.textContent
+    }
+  }
+  if (largerServiceChoiceDisplay.textContent) {
+    if (largerServiceChoiceDisplay.textContent = '$20/yr') {
+      
+      largerServiceChoiceDisplay.textContent = priceTagLargerService.textContent
+    }
+  }
+  if (customizableServiceChoiceDisplay.textContent) {
+    if (customizableServiceChoiceDisplay.textContent = '$30/yr') {
+      
+      customizableServiceChoiceDisplay.textContent = priceTagCustomizeService.textContent
+    }
+  }
 
 };
 

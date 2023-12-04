@@ -843,7 +843,9 @@ text-align: center;
   
  
   body{
-    background-color: rgb(248, 247, 247);
+    background-color:hsl(217, 100%, 97%)
+
+    
   }
 
   .Container-box {
@@ -876,7 +878,8 @@ display: none;  }
     display: block;
     /* width: 100%; */
     position: relative;
-    background-color: rgb(247, 246, 246);
+    background-color:hsl(217, 100%, 97%);
+
 
     /* display: flex; */
     height: 650px;
@@ -884,23 +887,34 @@ display: none;  }
     justify-content: center;
     align-items: center;
   }
+  /* - Cool gray: hsl(231, 11%, 63%)
+- Light gray: hsl(229, 24%, 87%)
+- Magnolia: hsl(217, 100%, 97%)
+- Alabaster: hsl(231, 100%, 99%)
+- White: hsl(0, 0%, 100%) */
+  .whole-section{
+    background-color:hsl(217, 100%, 97%)
+
+
+  }
   .aside-bar {
     /* margin-top: 0.3rem;
     margin-bottom: 0.3rem;
     margin-left: 0.3rem; */
+    background-color: rgb(189, 16, 16);
   
     position: relative;
-    /* border-radius: 10px; */
+    border-radius: 0px;
     background-image: url("images/bg-sidebar-mobile.svg");
-    background-size:contain;
+    /* background-size:contain; */
     background-repeat: no-repeat;
-    background-position: center;
-    height: 240px;
+    /* background-position: center; */
+    height: 206px;
   
-    width: 29rem;
+    width: 26rem;
 
-    background-color: rgb(128, 178, 190);
-    right: 20px;
+    /* background-color: rgb(128, 178, 190); */
+    right: 15px;
     bottom: 30px;
   }
   .main-content {
@@ -909,15 +923,16 @@ display: none;  }
     display: flex;
   position: absolute;
   top: 15%;
-  left: 37px;
+  left: 22px;
   margin-top: 0rem;
   margin-bottom: 0rem;
   margin-right: 0rem;
   padding: 2rem;
-  height: 450px;
+  height: 350px;
 
   width: 18rem;
-  background-color: rgb(247, 249, 250);
+  box-shadow: 0px 0.2rem 0px 1px rgb(107, 106, 106);
+  background-color:hsl(0, 0%, 100%) ;
    justify-content:center;
    margin-left: auto;
   margin-right: auto; 
@@ -967,6 +982,10 @@ text-align: center;
   font-size:0.8em
 
 
+}
+#btn--1{
+  position: relative;
+  top: 40px;
 }
 .adds-on-price-year{
   color: blue;
