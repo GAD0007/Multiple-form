@@ -841,9 +841,20 @@ text-align: center;
 }
 @media screen and (max-width: 440px) {
   
- 
+ .button-bg{
+  background-color: red;
+  position: absolute;
+  bottom: 1%;
+  left: -2%;
+  width: 28rem;
+  height: 30px;
+  z-index: 1000;
+ }
   body{
     background-color:hsl(217, 100%, 97%)
+    ;
+    position: relative;
+   
 
     
   }
@@ -911,7 +922,7 @@ display: none;  }
     /* background-position: center; */
     height: 206px;
   
-    width: 27rem;
+    width: 26rem;
 
     /* background-color: rgb(128, 178, 190); */
     right: 15px;
@@ -923,14 +934,14 @@ display: none;  }
     display: flex;
   position: absolute;
   top: 15%;
-  left: 17px;
+  left: 1.3rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   margin-right: 0rem;
   padding: 2rem;
   height: 350px;
 
-  width: 19rem;
+  width: 18rem;
   box-shadow: 0px 0.2rem 0px 1px rgb(107, 106, 106);
   background-color:hsl(0, 0%, 100%) ;
    justify-content:center;
