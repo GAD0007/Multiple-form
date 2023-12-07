@@ -822,6 +822,21 @@ a.change-link {
 .info-display5 {
   padding-top: 120px;
 }
+@media screen and (max-width: 414px) {
+  .main-content{
+    left: 7% !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .main-content{
+    left: 6% !important;
+  }
+}
+@media screen and (max-width: 330px) {
+  .main-content{
+    left: 5% !important;
+  }
+}
 @media screen and (max-width: 440px) {
 
   .inner-circle-month {
@@ -913,8 +928,8 @@ a.change-link {
     /* width: 28rem; */
     /* height: 30px; */
     z-index: 1000;
-    width: 27.5rem;
-    left: -5%;
+    width: 120%;
+    left: -10%;
 
   }
   .button-bg2 {
@@ -957,6 +972,7 @@ a.change-link {
     background-color: hsl(217, 100%, 97%);
     position: relative;
     margin: 0px;
+    position: relative;
     /* overflow-y: hidden; */
   }
 
@@ -992,6 +1008,7 @@ a.change-link {
     /* width: 100%; */
     position: relative;
     background-color: hsl(217, 100%, 97%);
+    width: 100%;
 
     /* display: flex; */
     height: 650px;
@@ -1022,7 +1039,7 @@ a.change-link {
     /* background-position: center; */
     height: 206px;
 
-    width: 27.5rem;
+    width: 100%;
 
     /* background-color: rgb(128, 178, 190); */
     /* right: 15px; */
@@ -1034,14 +1051,15 @@ a.change-link {
     /* display: flex; */
     position: absolute;
     top: 15%;
-    left: 1.25rem;
+    left: 2rem;
     margin-top: 0rem;
     /* margin-bottom: 0rem; */
     /* margin-right: 0rem; */
     padding: 2rem;
     height: fit-content;
 
-    width: 21rem;
+    max-width: 70%;
+    min-width: 10rem;
     box-shadow: 0px 0.3rem 0px 0.2px rgba(39, 38, 38, 0.082);
     background-color: hsl(0, 0%, 100%);
     justify-content: center;
