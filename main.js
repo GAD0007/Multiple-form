@@ -1,5 +1,9 @@
 "use strict";
 // const number1 =
+ window.onbeforeunload = function () {
+  return "data will be lost if you refresh the page, are you sure?"
+  
+}
 const number1 = document.querySelector(".number");
 const number2 = document.querySelector(".number2");
 const number3 = document.querySelector(".number3");
@@ -432,10 +436,12 @@ arcadeBtn.addEventListener("click", function () {
 // advanced button
 advancedBtn.addEventListener("click", function () {
   const advancedBtnValue = 12;
-
-  advancedBtn.classList.add("sub-box-on-click");
+    advancedBtn.classList.add("sub-box-on-click");
   arcadeBtn.classList.remove("sub-box-on-click");
   proBtn.classList.remove("sub-box-on-click");
+    
+
+  
   subDisplay.textContent = priceMonthAdvanced.textContent;
   subNameDisplay.textContent = 'Advanced'
 

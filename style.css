@@ -248,7 +248,7 @@ label {
   /* background-color: rgb(238, 238, 234); */
   border: 1px solid rgb(75, 77, 197);
   width: 28%;
-  height: 8.5rem;
+  /* height: 8.5rem; */
   transition: 0.3s ease;
 }
 /* .sub-box:active{
@@ -260,14 +260,14 @@ label {
 
   transition: 0.5s ease-in-out;
   border: 1px solid rgb(75, 77, 197);
-  height: 8.5rem;
+  height: 8rem;
 }
 .sub-box-out-click {
   background-color: rgb(255, 255, 255);
   transition: 0.5s;
   border: 1px solid rgb(211, 208, 208);
 
-  height: 9rem;
+  height: 8rem;
 }
 .sub-icon-box {
   position: absolute;
@@ -879,6 +879,25 @@ a.change-link {
   width: 7rem;
 }}
 @media screen and (max-width: 440px) {
+ 
+  /* .sub-box:active{
+    background-color: rgb(255, 255, 255);
+  
+  } */
+  .sub-box-on-click {
+    background-color: rgb(227, 238, 241);
+  
+    transition: 0.5s ease-in-out;
+    border: 1px solid rgb(75, 77, 197);
+    /* height: 8.5rem; */
+  }
+  .sub-box-out-click {
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+    border: 1px solid rgb(211, 208, 208);
+  
+    /* height: 9rem; */
+  }
   .popDisplayName,
 .popDisplayNumber {
   position: absolute;
@@ -894,13 +913,7 @@ a.change-link {
     background-color: rgb(227, 238, 241);
     padding: 0.5rem;
   }
-  .required-text {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: red;
-    font-weight: bold;
-    font-size: 16px;
-  }
+ 
 
   .inner-circle-month {
     width: 1rem;
@@ -932,12 +945,13 @@ a.change-link {
   }
   .info-display {
     line-height: 20px;
-    height: 330px;
+    height: 350px;
+    margin-top: 10px;
   
   }
   .go-back {
     margin-top: 0px;
-    margin-left: 15px;
+    margin-left: 43px;
     color: rgb(184, 184, 179);
     text-decoration: none;
     background-color: white;
@@ -971,7 +985,7 @@ a.change-link {
     display: block;
     margin-left: auto;
     margin-top: 15px;
-    margin-right: 15px;
+    margin-right: 40px;
     margin-bottom: 15px;
     font-size: 0.9rem;
     padding: 0.8rem 1.3rem;
@@ -1093,26 +1107,27 @@ a.change-link {
   .Container-box {
     display: flex;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 30%;
   }
   .Container-box2 {
     display: flex;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 40%;
   }
   .Container-box3 {
     display: flex;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
   }
   .Container-box4 {
     display: flex;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 60%;
+    background-color:transparent;
   }
   .steps {
     display: none;
@@ -1126,8 +1141,8 @@ a.change-link {
 
     /* display: flex; */
     /* min-height: 400px; */
-    height: 680px;
-    min-height: 100%;
+    height: 670px;
+    /* min-height: 100%; */
     /* max-height: 750px; */
 
     /* margin-top: 1rem; */
@@ -1168,7 +1183,7 @@ a.change-link {
     border-radius: 10px;
     /* display: flex; */
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 2.5rem;
     margin-top: 0rem;
     /* margin-bottom: 0rem; */
@@ -1330,9 +1345,16 @@ a.change-link {
   }
 }
 @media screen and (max-width: 530px) {
+  .sub-box:hover {
+    /* background-color: rgb(238, 238, 234); */
+    border: 1px solid rgb(75, 77, 197);
+    width: 100%;
+    /* height: 8.5rem; */
+    transition: 0.3s ease;
+  }
   .subscription-boxes {
     display: block;
-    width: 100%;
+    width: 100% ;
     /* align-items: center; */
     height: 19rem;
   }
@@ -1349,10 +1371,12 @@ a.change-link {
     background-color: rgb(255, 255, 255);
     transition: 0.5s;
     width: 100% !important;
+    height: 90px !important;
+
 
     border: 1px solid rgb(211, 208, 208);
 
-    height: 90px !important;
+    /* height: 90px !important; */
   }
   .sub-box {
     width: 100%;
@@ -1384,12 +1408,20 @@ a.change-link {
     bottom: 34% !important;
     color: rgb(39, 39, 95);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 0.8rem;
+
   }
   .sub-icon-box {
     position: absolute;
     top: 7%;
     left: 10%;
+  }
+  .required-text {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: red;
+    font-weight: bold;
+    font-size: 10px;
   }
   
 }
