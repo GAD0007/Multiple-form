@@ -1,9 +1,5 @@
 "use strict";
-// const number1 =
-//  window.onbeforeunload = function () {
-//   return "data will be lost if you refresh the page, are you sure?"
-  
-// }
+
 const number1 = document.querySelector(".number");
 const number2 = document.querySelector(".number2");
 const number3 = document.querySelector(".number3");
