@@ -163,6 +163,12 @@ const nextPage1Function = function name(params) {
     redRequired2.classList.add("hiddenPopNumber");
     redRequired.classList.remove("hiddenPopName");
   } else {
+    if (window.innerWidth <=441) {
+      document.querySelector('.button-bg22').style.display = 'block'
+      document.querySelector('.button-bg1').style.display = 'none'
+
+      
+    }
     // Code to execute if both condition1 and condition2 are false
 
     // console.log("next step");
@@ -491,8 +497,7 @@ priceTagCustomizeService.textContent = '$3/mo'
 // next step button for step 1
 nextBtnStep1SmallScreen.addEventListener("click",function name(params) {
   nextPage1Function()
-  document.querySelector('.button-bg22').style.display = 'block'
-  document.querySelector('.button-bg1').style.display = 'none'
+ 
 
   
 })
