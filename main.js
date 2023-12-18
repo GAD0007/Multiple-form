@@ -1,9 +1,9 @@
 "use strict";
 // const number1 =
- window.onbeforeunload = function () {
-  return "data will be lost if you refresh the page, are you sure?"
+//  window.onbeforeunload = function () {
+//   return "data will be lost if you refresh the page, are you sure?"
   
-}
+// }
 const number1 = document.querySelector(".number");
 const number2 = document.querySelector(".number2");
 const number3 = document.querySelector(".number3");
@@ -216,7 +216,10 @@ const toPage3 = function name(params) {
     number1.style.backgroundColor = "transparent";
     number2.style.backgroundColor = "transparent";
     number3.style.backgroundColor = "#a7eeee";
-redRequired3.textContent = 'You have selected a plan'
+redRequired3.textContent = 'You have selected a plan';
+document.querySelector('.button-bg22').style.display = 'none'
+  document.querySelector('.button-bg1').style.display = 'none'
+  document.querySelector('.button-bg33').style.display = 'block'
 
 
     // console.log("hmm");
@@ -530,9 +533,7 @@ previousStep1.addEventListener("click", backToPage1);
 nextBtnStep2.addEventListener("click", toPage3);
 nextBtnStep2Small.addEventListener("click", function () {
   toPage3()
-  document.querySelector('.button-bg22').style.display = 'none'
-  document.querySelector('.button-bg1').style.display = 'none'
-  document.querySelector('.button-bg33').style.display = 'block'
+  
 
   
 });

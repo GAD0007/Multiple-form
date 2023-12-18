@@ -451,8 +451,8 @@ label {
 }
 /* step 3 */
 .add-box {
-  width: 90%;
-  height: 3.5rem;
+  width: 100%;
+  height: 4.5rem;
   border-radius: 10px;
   background-color: white;
   border: 1px solid rgb(204, 202, 202);
@@ -460,8 +460,8 @@ label {
   position: relative;
 }
 .add-box1 {
-  width: 90%;
-  height: 3.5rem;
+  width: 100%;
+  height: 4.5rem;
   border-radius: 10px;
   background-color: white;
   border: 1px solid rgb(204, 202, 202);
@@ -469,8 +469,8 @@ label {
   position: relative;
 }
 .add-box2 {
-  width: 90%;
-  height: 3.5rem;
+  width: 100%;
+  height: 4.5rem;
   border-radius: 10px;
   background-color: white;
   border: 1px solid rgb(204, 202, 202);
@@ -491,6 +491,7 @@ label {
 }
 .adds-on-boxes {
   margin-top: 30px;
+  /* padding-left: 8%; */
 }
 .empty-check-box {
   width: 15px;
@@ -869,6 +870,62 @@ a.change-link {
     left: 7% !important;
   }
 }
+@media screen and (max-width: 350px) {
+
+.adds-on-price-month {
+  color: blue;
+  top: 40%;
+  left: 81%;
+  position: absolute;
+  /* font-size: 0.8rem; */
+  font-size: 0.8em !important;
+}
+.adds-on-price-month1 {
+  color: blue;
+  top: 40%;
+  left: 81%;
+  position: absolute;
+  /* font-size: 0.8rem; */
+  font-size: 0.8em !important;
+
+}
+.adds-on-price-month2 {
+  color: blue;
+  top: 40%;
+  left: 81%;
+  position: absolute;
+  /* font-size: 0.8rem; */
+  font-size: 0.8em !important;
+
+}
+
+.adds-on-price-year {
+  color: blue;
+  top: 40%;
+  left: 81%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 0.8em !important;
+
+}
+.adds-on-price-year1 {
+  color: blue;
+  top: 40%;
+  left: 81%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 0.8em !important;
+
+}
+.adds-on-price-year2 {
+  color: blue;
+  top: 40%;
+  left: 81%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 0.8em !important;
+
+}}
 @media screen and (max-width: 714px) {
   .popDisplayName,
 .popDisplayNumber {
@@ -935,7 +992,7 @@ a.change-link {
   }
   .info-display3 {
     line-height: 20px;
-    height: 270px;
+    height: 350px;
   
   }
   .info-display4 {
@@ -1215,29 +1272,38 @@ a.change-link {
   }
 }
 @media screen and (max-width: 600px) {
+  .adds-on-details-1 {
+    color: rgb(39, 39, 95);
+    font-weight: 700;
+  
+    font-size: 1rem;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+  }
   .adds-on-price-month {
     color: blue;
     top: 40%;
     left: 81%;
     position: absolute;
-    font-size: 0.8rem;
-    font-size: 0.8em;
+    /* font-size: 0.8rem; */
+    font-size: 1em;
   }
   .adds-on-price-month1 {
     color: blue;
     top: 40%;
     left: 81%;
     position: absolute;
-    font-size: 0.8rem;
-    font-size: 0.8em;
+    /* font-size: 0.8rem; */
+    font-size: 1em;
   }
   .adds-on-price-month2 {
     color: blue;
     top: 40%;
     left: 81%;
     position: absolute;
-    font-size: 0.8rem;
-    font-size: 0.8em;
+    font-size: 1em;
+    /* font-size: 0.8em; */
   }
 
   .adds-on-price-year {
@@ -1246,7 +1312,7 @@ a.change-link {
     left: 81%;
     position: absolute;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .adds-on-price-year1 {
     color: blue;
@@ -1254,7 +1320,7 @@ a.change-link {
     left: 81%;
     position: absolute;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .adds-on-price-year2 {
     color: blue;
@@ -1262,17 +1328,18 @@ a.change-link {
     left: 81%;
     position: absolute;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .adds-on-details-,
   .adds-on-details-3,
   .adds-on-details-5 {
-    font-size: 1em;
+    font-size: 0.9rem;
+    font-weight: 700;
   }
   .adds-on-details-2,
   .adds-on-details-4,
   .adds-on-details-6 {
-    font-size: 0.7em;
+    font-size: 11px;
   }
 
   .number {
@@ -1421,7 +1488,7 @@ a.change-link {
     margin-bottom: 0.5rem;
     color: red;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 13px;
   }
   
 }
