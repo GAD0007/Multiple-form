@@ -30,6 +30,9 @@ body {
   width: 15rem;
   background-color: aliceblue;
 }
+button{
+  cursor: pointer !important;
+}
 .main-content {
   position: relative;
   margin-top: 4rem;
@@ -822,22 +825,82 @@ a.change-link {
 .info-display5 {
   padding-top: 120px;
 }
+@media screen and (min-width: 441px) {
+  .button-bg1{
+    display: none !important;
+  }
+  .button-bg22{
+    display: none !important;
+  }
+  .button-bg33{
+    display: none !important;
+  }
+  .button-bg44{
+    display: none !important;
+  }
+}
 @media screen and (max-width: 414px) {
   .main-content{
-    left: 7% !important;
+    left: 8% !important;
   }
+}
+@media screen and (max-width: 420px) {
+  .info-display2 {
+    line-height: 20px;
+    height: 27rem !important;
+  
+  }
+
+.text1 {
+  font-size: 1.5rem;
+  font-weight:700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(39, 39, 95);
+  
+}
 }
 @media screen and (max-width: 380px) {
   .main-content{
-    left: 6% !important;
+    left: 8% !important;
   }
 }
 @media screen and (max-width: 330px) {
   .main-content{
-    left: 5% !important;
+    left: 7% !important;
   }
 }
+@media screen and (max-width: 714px) {
+  .popDisplayName,
+.popDisplayNumber {
+  position: absolute;
+  left: 55%;
+  color: red;
+  font-size: 12px;
+  width: 7rem;
+}}
 @media screen and (max-width: 440px) {
+  .popDisplayName,
+.popDisplayNumber {
+  position: absolute;
+  left: 55%;
+  color: red;
+  font-size: 10px;
+  width: 7rem;
+}
+  .month-year-toggle {
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(227, 238, 241);
+    padding: 0.5rem;
+  }
+  .required-text {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+  }
 
   .inner-circle-month {
     width: 1rem;
@@ -854,7 +917,7 @@ a.change-link {
  
   .info-display2 {
     line-height: 20px;
-    height: 430px;
+    height: 26rem;
   
   }
   .info-display3 {
@@ -864,7 +927,7 @@ a.change-link {
   }
   .info-display4 {
     line-height: 20px;
-    height: 330px;
+    height: 350px;
   
   }
   .info-display {
@@ -921,6 +984,7 @@ a.change-link {
   }
 
   .button-bg {
+    display: none;
     background-color:white;
     position: absolute;
     bottom: -40%;
@@ -932,7 +996,55 @@ a.change-link {
     left: -10%;
 
   }
+  .button-bg1 {
+    background-color:white;
+    position: absolute;
+    bottom: 0%;
+    /* width: 28rem; */
+    /* height: 30px; */
+    z-index: 1000;
+    width: 100%;
+    left: 0%;
+
+  }
+  .button-bg22 {
+    display: none;
+    background-color:white;
+    position: absolute;
+    bottom: 0%;
+    /* width: 28rem; */
+    /* height: 30px; */
+    z-index: 1000;
+    width: 100%;
+    left: 0%;
+
+  }
+  .button-bg33 {
+    display: none;
+    background-color:white;
+    position: absolute;
+    bottom: 0%;
+    /* width: 28rem; */
+    /* height: 30px; */
+    z-index: 1000;
+    width: 100%;
+    left: 0%;
+
+  }
+  .button-bg44 {
+    display: none;
+    background-color:white;
+    position: absolute;
+    bottom: 0%;
+    /* width: 28rem; */
+    /* height: 30px; */
+    z-index: 1000;
+    width: 100%;
+    left: 0%;
+
+  }
   .button-bg2 {
+    display: none;
     background-color:white;
     position: absolute;
     bottom: -20%;
@@ -945,6 +1057,7 @@ a.change-link {
 
   }
   .button-bg3 {
+    display: none;
     background-color:white;
     position: absolute;
     bottom: -65%;
@@ -957,6 +1070,7 @@ a.change-link {
     left: -5%;
   }
   .button-bg4 {
+    display: none;
     background-color:white;
     position: absolute;
     bottom: -40%;
@@ -1050,12 +1164,12 @@ a.change-link {
     border-radius: 10px;
     /* display: flex; */
     position: absolute;
-    top: 15%;
-    left: 2rem;
+    top: 13%;
+    left: 2.5rem;
     margin-top: 0rem;
     /* margin-bottom: 0rem; */
     /* margin-right: 0rem; */
-    padding: 2rem;
+    padding: 1.5rem;
     height: fit-content;
 
     max-width: 70%;
@@ -1216,7 +1330,7 @@ a.change-link {
     display: block;
     width: 100%;
     /* align-items: center; */
-    height: 20rem;
+    height: 19rem;
   }
   .sub-box-on-click {
     background-color: rgb(227, 238, 241);
@@ -1239,7 +1353,7 @@ a.change-link {
   .sub-box {
     width: 100%;
     height: 90px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .sub-main-details {
     bottom: 31%;

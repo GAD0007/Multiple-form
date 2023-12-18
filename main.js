@@ -68,11 +68,18 @@ const inputNumber = document.getElementById("phoneNumber--");
 const redRequired = document.querySelector(".popDisplayName");
 const redRequired2 = document.querySelector(".popDisplayNumber");
 const nextBtnStep1 = document.getElementById("btn--1");
+const nextBtnStep1SmallScreen = document.getElementById("btn--1-small");
+
+// btn--1-small
 
 // buttons and elements on step 2
 const redRequired3 = document.querySelector('.required-text')
 const previousStep1 = document.getElementById("btn--2");
+const previousStep1Small = document.getElementById("btn--2-small");
+
 const nextBtnStep2 = document.getElementById("btn--3");
+const nextBtnStep2Small = document.getElementById("btn--3-small");
+
 const arcadeBtn = document.getElementById("arcadeBtn--");
 const advancedBtn = document.getElementById("advancedBtn--");
 const proBtn = document.getElementById("proBtn--");
@@ -99,8 +106,13 @@ const checkBackground1 = document.querySelector(".empty-check-box1")
 const checkBackground2 = document.querySelector(".empty-check-box2")
 const previousStep2 = document.getElementById("btn--4");
 const nextBtnStep3 = document.getElementById("btn--5");
+const previousStep2Small = document.getElementById("btn--4-small");
+const nextBtnStep3Small = document.getElementById("btn--5-small");
 const previousStep3 = document.getElementById("btn--6");
+const previousStep3Small = document.getElementById("btn--6-small");
+
 const confirmBtn = document.getElementById("btn--7");
+
 
 
 
@@ -125,6 +137,194 @@ const monthYearEndDisplay = document.querySelector(".month-year-total");
 document.querySelector(".inner-circle-month").classList.remove("hidden-month");
 
 const subDisplay = document.querySelector(".sub-type");
+
+
+// function for next btn on page 1
+
+
+const nextPage1Function = function name(params) {
+  let outName = inputName.value;
+  let outEmail = inputEmail.value;
+  let outNumber = inputNumber.value;
+
+  if (outName === "" && outNumber === "") {
+    // Code to execute if condition1 is true (pop up "this field is required message")
+
+    redRequired2.classList.remove("hiddenPopNumber");
+    redRequired.classList.remove("hiddenPopName");
+  } else if (outNumber === "") {
+    // Code to execute if condition1 is false and condition2 is true
+
+    redRequired2.classList.remove("hiddenPopNumber");
+    redRequired.classList.add("hiddenPopName");
+  } else if (outName === "") {
+    // Code to execute if condition1 is false and condition2 is true
+
+    redRequired2.classList.add("hiddenPopNumber");
+    redRequired.classList.remove("hiddenPopName");
+  } else {
+    // Code to execute if both condition1 and condition2 are false
+
+    // console.log("next step");
+    number1.style.backgroundColor = "transparent";
+    number2.style.backgroundColor = "#a7eeee";
+
+    // switch to step 2
+
+    hiddenPage1.classList.add("hidden-Display-step1");
+    hiddenPage2.classList.remove("hidden-Display-step2");
+    // inputName.value = outName.value
+  }
+
+  
+}
+
+// back t0 page 1 function
+
+const backToPage1 = function name(params) {
+  event.preventDefault();
+  hiddenPage1.classList.remove("hidden-Display-step1");
+  hiddenPage2.classList.add("hidden-Display-step2");
+  number1.style.backgroundColor = "#a7eeee";
+  number2.style.backgroundColor = "transparent";
+  
+}
+
+// to page 3 function
+const toPage3 = function name(params) {
+  if (
+    subDisplay.textContent == "$90/yr" ||
+    subDisplay.textContent == "$9/mo" ||
+    subDisplay.textContent == "$120/yr" ||
+    subDisplay.textContent == "$12/mo" ||
+    subDisplay.textContent == "$15/mo" ||
+    subDisplay.textContent == "$150/yr"
+  ) {
+
+    hiddenPage2.classList.add('hidden-Display-step2')
+    hiddenPage3.classList.remove('hidden-Display-step3')
+    number1.style.backgroundColor = "transparent";
+    number2.style.backgroundColor = "transparent";
+    number3.style.backgroundColor = "#a7eeee";
+redRequired3.textContent = 'You have selected a plan'
+
+
+    // console.log("hmm");
+  } else {
+redRequired3.textContent = 'Please select a plan to proceed'
+  }
+  
+}
+
+// back to page 2 function
+
+const backToPage2 = function () {
+  event.preventDefault();
+  hiddenPage2.classList.remove("hidden-Display-step2");
+  hiddenPage3.classList.add("hidden-Display-step3");
+  number2.style.backgroundColor = "#a7eeee";
+  number3.style.backgroundColor = "transparent";
+  
+}
+
+// to summary and calculation page
+const sumCalc = function (params) {
+  let subValue= 0
+  let onlineServiceValue = 0
+  let largerServiceValue = 0
+  let customizableServiceValue = 0
+
+  number1.style.backgroundColor = "transparent";
+  number2.style.backgroundColor = "transparent";
+  number3.style.backgroundColor = "transparent";
+  number4.style.backgroundColor = "#a7eeee";
+
+  hiddenPage3.classList.add('hidden-Display-step3')
+hiddenPage4.classList.remove('hidden-Display-step4')
+if (subDisplay.textContent) {
+  if (subDisplay.textContent == "$9/mo" ) {
+    subValue=9
+    
+    
+  } else if (subDisplay.textContent == "$90/yr") {
+    subValue=90
+    
+  }
+  else if (subDisplay.textContent == "$12/mo") {
+    subValue=12
+    
+  }
+  else if (subDisplay.textContent == "$120/yr") {
+    subValue=120
+    
+  }else if (subDisplay.textContent == "$15/mo") {
+    subValue=15
+    
+  }else if (subDisplay.textContent == "$150/yr") {
+    subValue=150
+    
+  }
+
+}
+if(onlineServiceChoiceDisplay.textContent){
+  if (onlineServiceChoiceDisplay.textContent == "$10/yr") {
+    onlineServiceValue = 10
+  } else ( onlineServiceValue = 1)
+
+}
+if(largerServiceChoiceDisplay.textContent){
+  if (largerServiceChoiceDisplay.textContent == "$20/yr") {
+    largerServiceValue = 20
+  } else ( largerServiceValue = 2)
+
+}
+if(customizableServiceChoiceDisplay.textContent){
+  if (customizableServiceChoiceDisplay.textContent == "$30/yr") {
+    customizableServiceValue = 30
+  } else ( customizableServiceValue = 3)
+
+}
+  // console.log( subValue);
+  // console.log( onlineServiceValue);
+  // console.log( largerServiceValue);
+  // console.log( customizableServiceValue);
+  const totalValueFinally = subValue + onlineServiceValue + customizableServiceValue + largerServiceValue
+  totalAtEnd.textContent = totalValueFinally
+
+ 
+  
+}
+
+// back to page 3 
+const backtopage3 = function () {
+  event.preventDefault();
+  hiddenPage4.classList.add("hidden-Display-step4");
+  hiddenPage3.classList.remove("hidden-Display-step3");
+  number4.style.backgroundColor = "transparent";
+
+  number3.style.backgroundColor = "#a7eeee";
+  
+}
+
+// change btn
+const changeSubBtn = function () {
+  if (window.innerWidth <441) {
+    document.querySelector('.button-bg22').style.display = 'block'
+  document.querySelector('.button-bg1').style.display = 'none'
+  document.querySelector('.button-bg33').style.display = 'none'
+  document.querySelector('.button-bg44').style.display = 'none'
+    
+  }
+  number1.style.backgroundColor = "transparent";
+  number2.style.backgroundColor = "#a7eeee";
+  number3.style.backgroundColor = "transparent";
+  number4.style.backgroundColor = "transparent";
+hiddenPage1.classList.add("hidden-Display-step1")
+hiddenPage3.classList.add("hidden-Display-step3")
+hiddenPage4.classList.add("hidden-Display-step4")
+hiddenPage2.classList.remove("hidden-Display-step2")
+  
+}
 // display price of year sub click function
 
 // price for month function on step 2
@@ -289,80 +489,43 @@ priceTagCustomizeService.textContent = '$3/mo'
 });
 
 // next step button for step 1
-nextBtnStep1.addEventListener("click", function () {
-  let outName = inputName.value;
-  let outEmail = inputEmail.value;
-  let outNumber = inputNumber.value;
+nextBtnStep1SmallScreen.addEventListener("click",function name(params) {
+  nextPage1Function()
+  document.querySelector('.button-bg22').style.display = 'block'
+  document.querySelector('.button-bg1').style.display = 'none'
 
-  if (outName === "" && outNumber === "") {
-    // Code to execute if condition1 is true (pop up "this field is required message")
-
-    redRequired2.classList.remove("hiddenPopNumber");
-    redRequired.classList.remove("hiddenPopName");
-  } else if (outNumber === "") {
-    // Code to execute if condition1 is false and condition2 is true
-
-    redRequired2.classList.remove("hiddenPopNumber");
-    redRequired.classList.add("hiddenPopName");
-  } else if (outName === "") {
-    // Code to execute if condition1 is false and condition2 is true
-
-    redRequired2.classList.add("hiddenPopNumber");
-    redRequired.classList.remove("hiddenPopName");
-  } else {
-    // Code to execute if both condition1 and condition2 are false
-
-    // console.log("next step");
-    number1.style.backgroundColor = "transparent";
-    number2.style.backgroundColor = "#a7eeee";
-
-    // switch to step 2
-
-    hiddenPage1.classList.add("hidden-Display-step1");
-    hiddenPage2.classList.remove("hidden-Display-step2");
-    // inputName.value = outName.value
-  }
+  
+})
+nextBtnStep1.addEventListener("click", nextPage1Function 
+  
+  
 
   // console.log("Input Value:", outName, outEmail, outNumber);
 
   //  console.log(inputValue);
-});
+);
 
 // go back  button to step 1
-previousStep1.addEventListener("click", function () {
-  event.preventDefault();
-  hiddenPage1.classList.remove("hidden-Display-step1");
-  hiddenPage2.classList.add("hidden-Display-step2");
-  number1.style.backgroundColor = "#a7eeee";
-  number2.style.backgroundColor = "transparent";
+previousStep1Small.addEventListener("click", function () {
+ backToPage1()
+  document.querySelector('.button-bg22').style.display = 'none'
+  document.querySelector('.button-bg1').style.display = 'block'
 
   // switch to step 2
 });
+previousStep1.addEventListener("click", backToPage1);
 
 // next step button for step 2
-nextBtnStep2.addEventListener("click", function name(params) {
-  if (
-    subDisplay.textContent == "$90/yr" ||
-    subDisplay.textContent == "$9/mo" ||
-    subDisplay.textContent == "$120/yr" ||
-    subDisplay.textContent == "$12/mo" ||
-    subDisplay.textContent == "$15/mo" ||
-    subDisplay.textContent == "$150/yr"
-  ) {
+nextBtnStep2.addEventListener("click", toPage3);
+nextBtnStep2Small.addEventListener("click", function () {
+  toPage3()
+  document.querySelector('.button-bg22').style.display = 'none'
+  document.querySelector('.button-bg1').style.display = 'none'
+  document.querySelector('.button-bg33').style.display = 'block'
 
-    hiddenPage2.classList.add('hidden-Display-step2')
-    hiddenPage3.classList.remove('hidden-Display-step3')
-    number1.style.backgroundColor = "transparent";
-    number2.style.backgroundColor = "transparent";
-    number3.style.backgroundColor = "#a7eeee";
-redRequired3.textContent = 'You have selected a plan'
-
-
-    // console.log("hmm");
-  } else {
-redRequired3.textContent = 'Please select a plan to proceed'
-  }
+  
 });
+
 // online button selector on step 3
 let clickCount = 0
 let clickCount1 = 0
@@ -438,109 +601,57 @@ DisplayAddsCustomize.textContent = ''
   // console.log('ggsgsg');
   
 })
-// previous page btn to step 2
-previousStep2.addEventListener("click", function () {
-  event.preventDefault();
-  hiddenPage2.classList.remove("hidden-Display-step2");
-  hiddenPage3.classList.add("hidden-Display-step3");
-  number2.style.backgroundColor = "#a7eeee";
-  number3.style.backgroundColor = "transparent";
 
 
+// switch to step 2
+previousStep2Small.addEventListener("click", function () {
+  backToPage2()
+  document.querySelector('.button-bg22').style.display = 'block'
+  document.querySelector('.button-bg1').style.display = 'none'
+  document.querySelector('.button-bg33').style.display = 'none'
+
+})
+  previousStep2.addEventListener("click", backToPage2);
+
+
+  // previous page btn to step 3
   // switch to step 2
-});
-// previous page btn to step 3
-previousStep3.addEventListener("click", function () {
-  event.preventDefault();
-  hiddenPage4.classList.add("hidden-Display-step4");
-  hiddenPage3.classList.remove("hidden-Display-step3");
-  number4.style.backgroundColor = "transparent";
+previousStep3Small.addEventListener("click", function () {
+  backtopage3()
+  document.querySelector('.button-bg22').style.display = 'none'
+  document.querySelector('.button-bg1').style.display = 'none'
+  document.querySelector('.button-bg33').style.display = 'block'
+  document.querySelector('.button-bg44').style.display = 'none'
 
-  number3.style.backgroundColor = "#a7eeee";
+})
 
-
-  // switch to step 2
-});
+previousStep3.addEventListener("click", backtopage3);
 
 // next btn to summary page
-nextBtnStep3.addEventListener('click',function () {
-  let subValue= 0
-  let onlineServiceValue = 0
-  let largerServiceValue = 0
-  let customizableServiceValue = 0
+nextBtnStep3Small.addEventListener('click',function () {
+  sumCalc ()
+  document.querySelector('.button-bg22').style.display = 'none'
+  document.querySelector('.button-bg1').style.display = 'none'
+  document.querySelector('.button-bg33').style.display = 'none'
+  document.querySelector('.button-bg44').style.display = 'block'
 
-  number1.style.backgroundColor = "transparent";
-  number2.style.backgroundColor = "transparent";
-  number3.style.backgroundColor = "transparent";
-  number4.style.backgroundColor = "#a7eeee";
 
-  hiddenPage3.classList.add('hidden-Display-step3')
-hiddenPage4.classList.remove('hidden-Display-step4')
-if (subDisplay.textContent) {
-  if (subDisplay.textContent == "$9/mo" ) {
-    subValue=9
-    
-    
-  } else if (subDisplay.textContent == "$90/yr") {
-    subValue=90
-    
-  }
-  else if (subDisplay.textContent == "$12/mo") {
-    subValue=12
-    
-  }
-  else if (subDisplay.textContent == "$120/yr") {
-    subValue=120
-    
-  }else if (subDisplay.textContent == "$15/mo") {
-    subValue=15
-    
-  }else if (subDisplay.textContent == "$150/yr") {
-    subValue=150
-    
-  }
-
-}
-if(onlineServiceChoiceDisplay.textContent){
-  if (onlineServiceChoiceDisplay.textContent == "$10/yr") {
-    onlineServiceValue = 10
-  } else ( onlineServiceValue = 1)
-
-}
-if(largerServiceChoiceDisplay.textContent){
-  if (largerServiceChoiceDisplay.textContent == "$20/yr") {
-    largerServiceValue = 20
-  } else ( largerServiceValue = 2)
-
-}
-if(customizableServiceChoiceDisplay.textContent){
-  if (customizableServiceChoiceDisplay.textContent == "$30/yr") {
-    customizableServiceValue = 30
-  } else ( customizableServiceValue = 3)
-
-}
-  // console.log( subValue);
-  // console.log( onlineServiceValue);
-  // console.log( largerServiceValue);
-  // console.log( customizableServiceValue);
-  const totalValueFinally = subValue + onlineServiceValue + customizableServiceValue + largerServiceValue
-  totalAtEnd.textContent = totalValueFinally
-
-  
 })
+nextBtnStep3.addEventListener('click',sumCalc)
+
+
 // change btn
-changeBtnStep4.addEventListener('click',function (params) {
-  number1.style.backgroundColor = "transparent";
-  number2.style.backgroundColor = "#a7eeee";
-  number3.style.backgroundColor = "transparent";
-  number4.style.backgroundColor = "transparent";
-hiddenPage1.classList.add("hidden-Display-step1")
-hiddenPage3.classList.add("hidden-Display-step3")
-hiddenPage4.classList.add("hidden-Display-step4")
-hiddenPage2.classList.remove("hidden-Display-step2")
+// changeBtnStep4Small.addEventListener('click',function (params) {
+//   changeSubBtn()
+//   document.querySelector('.button-bg22').style.display = 'block'
+//   document.querySelector('.button-bg1').style.display = 'none'
+//   document.querySelector('.button-bg33').style.display = 'none'
+//   document.querySelector('.button-bg44').style.display = 'none'
 
+// })
 
-})
+changeBtnStep4.addEventListener('click',changeSubBtn)
+
 // confirm button
 confirmBtn.addEventListener("click", function () {
   hiddenPage1.classList.add("hidden-Display-step1")
@@ -548,6 +659,10 @@ confirmBtn.addEventListener("click", function () {
 hiddenPage3.classList.add("hidden-Display-step3")
 hiddenPage4.classList.add("hidden-Display-step4")
 hiddenPage5.classList.remove("hidden-Display-step5")
+document.querySelector('.button-bg22').style.display = 'none'
+document.querySelector('.button-bg1').style.display = 'none'
+document.querySelector('.button-bg33').style.display = 'none'
+document.querySelector('.button-bg44').style.display = 'none'
 
 
 })
